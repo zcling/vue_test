@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../staic/vue.js"></script>
+</head>
+<body>
+<p>可以用v-else指令为v-if或v-show添加一个“else块”。v-else元素必须立即跟在v-if或v-show元素的后面——否则它不能被识别。</p>
+<div id="app">
+    <h1 v-if="age >= 25">Age:{{age}}</h1>
+    <h1 v-else>OtherAge:{{age}}</h1>
+    <h1>----------------------------分割线------------------------</h1>
+    <h1 v-show="name.indexOf('keep') >= 0">Name: {{ name }}</h1>
+    <h1 v-else>Sex: {{ sex }}</h1>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            age:28,
+            name:'1keepGoing',
+            sex:'Male'
+        }
+    })
+</script>
+</html>

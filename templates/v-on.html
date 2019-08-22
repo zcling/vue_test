@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../staic/vue.js"></script>
+</head>
+<body>
+<p>v-on指令用于给监听DOM事件，它的用语法和v-bind是类似的，例如监听<a>元素的点击事件</p>
+<div id="app">
+        <p><input type="text" v-model="message"></p>
+        <p>
+            <!--click事件直接绑定一个方法-->
+            <button v-on:click="greet">Greet</button>
+        </p>
+        <p>
+            <!--click事件使用内联语句-->
+            <button v-on:click="say('Hi')">Hi</button>
+        </p>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            message:'hello,vue.js'
+        },
+        methods:{
+            greet:function () {
+                alert(this.message);
+            },
+            say: function(msg) {
+                alert(msg)
+            }
+        }
+    })
+</script>
+</html>
