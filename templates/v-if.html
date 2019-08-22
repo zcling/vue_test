@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-if</title>
+    <script type="text/javascript" src="../staic/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>V-if测试</h1>
+    <h1 v-if="yes">Yes!</h1>
+    <h1 v-if="no">No!</h1>
+    <h1 v-if="name.indexOf('z')">{{ name }}</h1>
+</div>
+</body>
+<script>
+    var vue = new vue({
+        el: '#app',
+        data: {
+            yes: true,
+            no: false,
+            name: 'keepfool'
+        }
+    })
+</script>
+</html>
